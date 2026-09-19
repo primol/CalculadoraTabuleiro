@@ -61,17 +61,6 @@ button:disabled {
 .btn-secondary { background: #6c757d; color: white; }
 .btn-secondary:hover:not(:disabled) { background: #545b62; }
 
-.theme-toggle {
-  margin-top: 12px;
-  background: transparent;
-  color: #8a6500;
-  border: 1px solid #c79a20;
-}
-
-.theme-toggle:hover:not(:disabled) {
-  background: #fff4ca;
-}
-
 /* Tela Inicial e Fim de Jogo */
 .screen-card {
   max-width: 500px;
@@ -91,9 +80,9 @@ button:disabled {
   height: 180px;
   object-fit: contain;
   margin: 0 auto 18px;
-  border: 1px solid #c79a20;
-  border-radius: 10px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+  border: none;
+  border-radius: 24px;
+  box-shadow: none;
 }
 
 .theme-kicker {
@@ -283,11 +272,6 @@ button:disabled {
   text-shadow: 0 0 18px rgba(238, 191, 55, 0.25);
 }
 
-.theme-gold .game-logo {
-  border-color: #d5a938;
-  box-shadow: 0 0 22px rgba(226, 174, 48, 0.2);
-}
-
 .theme-gold .theme-kicker,
 .theme-gold label,
 .theme-gold .value-item,
@@ -334,16 +318,6 @@ button:disabled {
 
 .theme-gold .btn-danger {
   background: #8e3025;
-}
-
-.theme-gold .theme-toggle {
-  color: #f2ce62;
-  border-color: #b98d20;
-}
-
-.theme-gold .theme-toggle:hover:not(:disabled) {
-  color: #211806;
-  background: #e0b43b;
 }
 
 .theme-gold .center-panel {

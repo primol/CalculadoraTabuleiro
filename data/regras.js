@@ -5,7 +5,7 @@ export const regrasPadrao = Array.from({ length: 6 }, (_, index) => {
   return {
     inicio,
     fim,
-    torrer: 100 + inicio * 10,
+    torre: 100 + inicio * 10,
     perk: 200 + inicio * 20,
     terreno: 300 + inicio * 25,
   };
@@ -19,7 +19,10 @@ export const getRegras = () => {
     try {
       const regrasSalvas = JSON.parse(salvas);
       if (regrasSalvas.length && regrasSalvas[0].inicio !== undefined) {
-        return regrasSalvas;
+        return regrasSalvas.map((regra) => ({
+          ...regra,
+          torre: regra.torre ?? regra.torrer ?? 0,
+        }));
       }
     } catch (e) {
       console.error('Erro ao ler regras do localStorage', e);

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 export function Jogador({ jogadorState, onAtualizarSaldo, regraDia }) {
   const [valDespesa, setValDespesa] = useState('');
   const [valGanho, setValGanho] = useState('');
+  const [detalhes, setDetalhes] = useState('');
 
   // Regra de negócio: Jogador precisa primeiro registrar a despesa antes de liberar o ganho
   const [despesaRegistrada, setDespesaRegistrada] = useState(false);
@@ -36,6 +37,13 @@ export function Jogador({ jogadorState, onAtualizarSaldo, regraDia }) {
   return (
     <div className="player-card">
       <h3 className="player-title">{jogadorState.nome}</h3>
+      <textarea
+        className="game-notes"
+        placeholder="Detalhes do jogo"
+        value={detalhes}
+        onChange={(e) => setDetalhes(e.target.value)}
+        rows="3"
+      />
       <div className="player-balance">R$ {jogadorState.saldo}</div>
 
       {/* Regra de Despesa Obrigatória */}
@@ -71,8 +79,8 @@ export function Jogador({ jogadorState, onAtualizarSaldo, regraDia }) {
       <div className="items-group">
         <h4>Compras</h4>
         <div className="item-buy-row">
-          <button className="btn-secondary purchase-button" onClick={() => handleComprar(regraDia.torrer)}>
-            Torrer <span>R$ {regraDia.torrer}</span>
+          <button className="btn-secondary purchase-button" onClick={() => handleComprar(regraDia.torre)}>
+            Torre <span>R$ {regraDia.torre}</span>
           </button>
         </div>
         <div className="item-buy-row">

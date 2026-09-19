@@ -15,8 +15,8 @@ export function ValoresDoDia({ diaAtual, regraDia, onProximaRodada, totalRodadas
         
         <h4>VALORES</h4>
         <div className="value-item">
-          <span>Torrer</span>
-          <strong>R$ {regraDia.torrer}</strong>
+          <span>Torre</span>
+          <strong>R$ {regraDia.torre}</strong>
         </div>
         <div className="value-item">
           <span>Perk</span>

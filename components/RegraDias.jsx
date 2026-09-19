@@ -29,11 +29,11 @@ export function RegrasDias({ regras, setRegras, Voltar }) {
           <div key={regra.inicio} className="regra-dia-card">
             <h4>DIAS {regra.inicio} - {regra.fim}</h4>
             <div className="form-group">
-              <label>Torrer:</label>
+              <label>Torre:</label>
               <input
                 type="number"
-                value={regra.torrer}
-                onChange={(e) => handleChange(idx, 'torrer', e.target.value)}
+                value={regra.torre}
+                onChange={(e) => handleChange(idx, 'torre', e.target.value)}
               />
             </div>
             <div className="form-group">

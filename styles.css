@@ -118,6 +118,16 @@ button:disabled {
 .player-title { text-align: center; font-size: 1.2rem; }
 .player-balance { text-align: center; font-size: 1.8rem; color: #28a745; font-weight: bold; }
 
+.game-notes {
+  width: 100%;
+  resize: vertical;
+  min-height: 70px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
 .action-row {
   display: flex;
   gap: 10px;

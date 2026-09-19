@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../Fotos/image.jpg';
 
 export function Inicio({ onStartGame, onOpenRegras, temaDourado, onToggleTema }) {
   const [j1, setJ1] = useState('Jogador 1');
@@ -16,6 +17,7 @@ export function Inicio({ onStartGame, onOpenRegras, temaDourado, onToggleTema })
 
   return (
     <div className="screen-card">
+      <img className="game-logo" src={logo} alt="Logo Bulls & Bears Card Game" />
       <h2>Calculadora do Jogo</h2>
       <p className="theme-kicker">Prepare a mesa e comece a partida</p>
       <br />

@@ -14,6 +14,9 @@ export function Jogo({ config, regras, onReiniciar }) {
     (regra) => rodadaAtual >= regra.inicio && rodadaAtual <= regra.fim,
   ) || regras[0];
 
+  const situacaoJ1 = j1.saldo === j2.saldo ? 'empatado' : j1.saldo > j2.saldo ? 'ganhando' : 'perdendo';
+  const situacaoJ2 = j2.saldo === j1.saldo ? 'empatado' : j2.saldo > j1.saldo ? 'ganhando' : 'perdendo';
+
   const handleProximaRodada = () => {
     if (rodadaAtual < TOTAL_RODADAS) {
       setRodadaAtual((prev) => prev + 1);
@@ -61,6 +64,7 @@ export function Jogo({ config, regras, onReiniciar }) {
         jogadorState={j1}
         onAtualizarSaldo={atualizarSaldoJ1}
         regraDia={regraDiaAtual}
+        situacao={situacaoJ1}
       />
 
       <ValoresDoDia
@@ -74,6 +78,7 @@ export function Jogo({ config, regras, onReiniciar }) {
         jogadorState={j2}
         onAtualizarSaldo={atualizarSaldoJ2}
         regraDia={regraDiaAtual}
+        situacao={situacaoJ2}
       />
     </div>
   );

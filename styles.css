@@ -136,6 +136,18 @@ button:disabled {
 .player-title { text-align: center; font-size: 1.2rem; }
 .player-balance { text-align: center; font-size: 1.8rem; color: #28a745; font-weight: bold; }
 
+.player-card--ganhando {
+  border-color: #42c96b;
+  background: linear-gradient(145deg, #f8fff9, #eaf8ee);
+  box-shadow: 0 0 18px rgba(44, 194, 86, 0.22);
+}
+
+.player-card--perdendo {
+  border-color: #e26b6b;
+  background: linear-gradient(145deg, #fffafa, #f9eded);
+  box-shadow: 0 0 14px rgba(214, 61, 61, 0.14);
+}
+
 .game-notes {
   width: 100%;
   resize: vertical;
@@ -330,4 +342,16 @@ button:disabled {
 .theme-gold .player-balance {
   color: #f2c94c;
   text-shadow: 0 0 12px rgba(242, 201, 76, 0.2);
+}
+
+.theme-gold .player-card--ganhando {
+  background: linear-gradient(145deg, rgba(24, 61, 35, 0.94), rgba(15, 34, 22, 0.94));
+  border-color: #48d873;
+  box-shadow: 0 0 22px rgba(54, 218, 103, 0.2), inset 0 0 18px rgba(54, 218, 103, 0.05);
+}
+
+.theme-gold .player-card--perdendo {
+  background: linear-gradient(145deg, rgba(67, 27, 27, 0.94), rgba(36, 18, 18, 0.94));
+  border-color: #dc6868;
+  box-shadow: 0 0 18px rgba(220, 79, 79, 0.16), inset 0 0 18px rgba(220, 79, 79, 0.04);
 }

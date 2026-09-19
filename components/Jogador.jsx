@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export function Jogador({ jogadorState, onAtualizarSaldo, regraDia }) {
+export function Jogador({ jogadorState, onAtualizarSaldo, regraDia, situacao }) {
   const [valDespesa, setValDespesa] = useState('');
   const [valGanho, setValGanho] = useState('');
   const [detalhes, setDetalhes] = useState('');
@@ -35,7 +35,7 @@ export function Jogador({ jogadorState, onAtualizarSaldo, regraDia }) {
   };
 
   return (
-    <div className="player-card">
+    <div className={`player-card player-card--${situacao}`}>
       <h3 className="player-title">{jogadorState.nome}</h3>
       <div className="player-balance">R$ {jogadorState.saldo}</div>
 

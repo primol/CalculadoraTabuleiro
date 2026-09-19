@@ -31,7 +31,11 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          cp index.html index.pages.html
+          cp index.src.html index.html
+          npm run build
+          mv index.pages.html index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

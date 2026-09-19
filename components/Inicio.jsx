@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export function Inicio({ onStartGame, onOpenRegras }) {
+export function Inicio({ onStartGame, onOpenRegras, temaDourado, onToggleTema }) {
   const [j1, setJ1] = useState('Jogador 1');
   const [j2, setJ2] = useState('Jogador 2');
   const [saldoInicial, setSaldoInicial] = useState(1000);
@@ -17,6 +17,7 @@ export function Inicio({ onStartGame, onOpenRegras }) {
   return (
     <div className="screen-card">
       <h2>Calculadora do Jogo</h2>
+      <p className="theme-kicker">Prepare a mesa e comece a partida</p>
       <br />
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -42,6 +43,9 @@ export function Inicio({ onStartGame, onOpenRegras }) {
       <br />
       <button onClick={onOpenRegras} className="btn-secondary" style={{ width: '100%' }}>
         Regras dos Dias (Configurar)
+      </button>
+      <button onClick={onToggleTema} className="theme-toggle" style={{ width: '100%' }}>
+        {temaDourado ? 'Usar tema claro' : 'Ativar tema preto e ouro'}
       </button>
     </div>
   );

@@ -10,6 +10,7 @@ export default function App() {
   const [tela, setTela] = useState('inicio');
   const [regras, setRegras] = useState(getRegras());
   const [configJogo, setConfigJogo] = useState(null);
+  const [temaDourado, setTemaDourado] = useState(false);
 
   const handleStartGame = (config) => {
     setConfigJogo(config);
@@ -17,7 +18,7 @@ export default function App() {
   };
 
   return (
-    <div className="app-container">
+    <div className={`app-container${temaDourado ? ' theme-gold' : ''}`}>
       {tela !== 'inicio' && (
         <div className="nav-header">
           {tela === 'jogo' && (
@@ -35,6 +36,8 @@ export default function App() {
         <Inicio
           onStartGame={handleStartGame}
           onOpenRegras={() => setTela('regras')}
+          temaDourado={temaDourado}
+          onToggleTema={() => setTemaDourado((temaAtual) => !temaAtual)}
         />
       )}
 

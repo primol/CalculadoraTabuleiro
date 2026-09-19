@@ -37,13 +37,6 @@ export function Jogador({ jogadorState, onAtualizarSaldo, regraDia }) {
   return (
     <div className="player-card">
       <h3 className="player-title">{jogadorState.nome}</h3>
-      <textarea
-        className="game-notes"
-        placeholder="Detalhes do jogo"
-        value={detalhes}
-        onChange={(e) => setDetalhes(e.target.value)}
-        rows="3"
-      />
       <div className="player-balance">R$ {jogadorState.saldo}</div>
 
       {/* Regra de Despesa Obrigatória */}
@@ -94,6 +87,14 @@ export function Jogador({ jogadorState, onAtualizarSaldo, regraDia }) {
           </button>
         </div>
       </div>
+
+      <textarea
+        className="game-notes"
+        placeholder="Detalhes do jogo"
+        value={detalhes}
+        onChange={(e) => setDetalhes(e.target.value)}
+        rows="3"
+      />
     </div>
   );
 }
